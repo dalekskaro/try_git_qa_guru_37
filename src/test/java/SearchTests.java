@@ -25,7 +25,7 @@ public class SearchTests {
     @DisplayName("Проверка поиска на вб")
     void successfulSearchWbTest() {
         open("https://www.wildberries.ru/");
-        $("[id=searchInput]").setValue("qa").pressEnter();
-        $("[class=searching-results__title]").shouldHave(text("Qa"));
+        $("[id=searchInput]").setValue("Кепка").pressEnter();
+        $("[class=searching-results__title]").shouldHave(text("Кепка"));
     }
 }
