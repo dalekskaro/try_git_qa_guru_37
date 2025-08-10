@@ -28,4 +28,13 @@ public class SearchTests {
         $("[id=searchInput]").setValue("Кепка").pressEnter();
         $("[class=searching-results__title]").shouldHave(text("Кепка"));
     }
+
+    @Test
+    @DisplayName("Проверка поиска в яндексе")
+    void successfulSearchYandexTest() {
+        open("https://ya.ru/");
+        $("[class=search3__input-inner-container]").click();
+        $("[aria-label=Запрос]").setValue("qa guru").pressEnter();
+        $("[id=search-result]").shouldHave(text("qa.guru"));
+    }
 }
